@@ -35,7 +35,7 @@ export default function Sidebar({ nodes, selectedNodeId, onSelectNode, onCreateN
         <div key={node.id} className="w-full">
           <div 
             className={`group flex items-center px-2 py-1 cursor-pointer select-none text-sm relative
-              ${isSelected ? 'bg-[#373e47] text-white rounded-md font-medium' : 'text-github-text hover:bg-[#21262d] rounded-md'}
+              ${isSelected ? 'bg-gray-200 text-github-text rounded-md font-medium' : 'text-github-text hover:bg-gray-100 rounded-md'}
             `}
             style={{ paddingLeft: `${(level * 12) + 8}px` }}
               onClick={() => {
@@ -62,19 +62,19 @@ export default function Sidebar({ nodes, selectedNodeId, onSelectNode, onCreateN
             </span>
             
             {/* Create & Delete Actions */}
-            <div className="hidden group-hover:flex items-center gap-1 absolute right-2 bg-[#21262d] px-1 rounded">
+            <div className="hidden group-hover:flex items-center gap-1 absolute right-2 bg-gray-100 px-1 rounded">
               {isFolder && (
                 <>
                   <button 
                     onClick={(e) => { e.stopPropagation(); onCreateNode(node, 'folder'); }} 
-                    className="p-1 hover:text-white hover:bg-[#30363d] rounded text-github-muted"
+                    className="p-1 hover:text-github-text hover:bg-gray-200 rounded text-github-muted"
                     title="New Folder"
                   >
                     <FolderPlus size={14} />
                   </button>
                   <button 
                     onClick={(e) => { e.stopPropagation(); onCreateNode(node, 'file'); }} 
-                    className="p-1 hover:text-white hover:bg-[#30363d] rounded text-github-muted"
+                    className="p-1 hover:text-github-text hover:bg-gray-200 rounded text-github-muted"
                     title="New File"
                   >
                     <FilePlus size={14} />
@@ -84,7 +84,7 @@ export default function Sidebar({ nodes, selectedNodeId, onSelectNode, onCreateN
               {!node.isCourse && (
                 <button 
                   onClick={(e) => { e.stopPropagation(); onDeleteNode(node); }} 
-                  className="p-1 hover:text-red-400 hover:bg-[#30363d] rounded text-github-muted"
+                  className="p-1 hover:text-red-600 hover:bg-gray-200 rounded text-github-muted"
                   title="Delete"
                 >
                   <Trash2 size={14} />
@@ -104,9 +104,9 @@ export default function Sidebar({ nodes, selectedNodeId, onSelectNode, onCreateN
   };
 
   return (
-    <div className="w-64 h-full bg-[#0d1117] border-r border-github-border flex flex-col flex-shrink-0 overflow-hidden">
+    <div className="w-64 h-full bg-github-canvas border-r border-github-border flex flex-col flex-shrink-0 overflow-hidden">
       <div className="p-3 border-b border-github-border">
-        <h2 className="text-white font-semibold mb-3 flex items-center gap-2">
+        <h2 className="text-github-text font-semibold mb-3 flex items-center gap-2">
           <FileText size={18} className="text-github-text" />
           Content Nodes
         </h2>
@@ -117,7 +117,7 @@ export default function Sidebar({ nodes, selectedNodeId, onSelectNode, onCreateN
             placeholder="Search content..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-[#010409] border border-github-border text-github-text rounded-md pl-8 pr-3 py-1.5 text-sm focus:outline-none focus:border-github-link focus:ring-1 focus:ring-github-link"
+            className="w-full bg-white border border-github-border text-github-text rounded-md pl-8 pr-3 py-1.5 text-sm focus:outline-none focus:border-github-link focus:ring-1 focus:ring-github-link"
           />
         </div>
       </div>
