@@ -9,10 +9,10 @@ export default function EditorPane({ content, onChange }) {
   };
 
   return (
-    <div className="h-full w-full flex flex-col bg-[#0d1117]">
-      <div className="flex items-center px-4 py-2 border-b border-github-border bg-[#161b22] h-[45px]">
+    <div className="h-full w-full flex flex-col bg-github-bg">
+      <div className="flex items-center px-4 py-2 border-b border-github-border bg-github-canvas h-[45px]">
         <div className="flex gap-2">
-          <span className="text-xs font-semibold text-github-muted bg-[#21262d] border border-github-border px-2 py-1 rounded-md">
+          <span className="text-xs font-semibold text-github-muted bg-gray-100 border border-github-border px-2 py-1 rounded-md">
             Markdown
           </span>
         </div>
@@ -21,7 +21,7 @@ export default function EditorPane({ content, onChange }) {
         <Editor
           height="100%"
           defaultLanguage="markdown"
-          theme="vs-dark"
+          theme="light"
           value={content}
           onChange={handleEditorChange}
           options={{

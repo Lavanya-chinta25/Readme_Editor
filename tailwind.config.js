@@ -8,14 +8,14 @@ export default {
     extend: {
       colors: {
         github: {
-          dark: '#0d1117',
-          border: '#30363d',
-          canvas: '#161b22',
-          text: '#c9d1d9',
-          muted: '#8b949e',
-          link: '#58a6ff',
-          success: '#238636',
-          successHover: '#2ea043'
+          bg: '#ffffff',
+          border: '#d0d7de',
+          canvas: '#f6f8fa',
+          text: '#1F2328',
+          muted: '#656d76',
+          link: '#0969da',
+          success: '#1f883d',
+          successHover: '#1a7f37'
         }
       }
     },

@@ -148,20 +148,20 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="flex h-screen bg-[#0d1117] text-github-text font-sans overflow-hidden">
+    <div className="flex h-screen bg-github-bg text-github-text font-sans overflow-hidden">
       {/* Header / Nav */}
-      <div className="absolute top-0 left-0 right-0 h-14 bg-[#010409] border-b border-github-border flex items-center justify-between px-3 md:px-4 z-20">
+      <div className="absolute top-0 left-0 right-0 h-14 bg-github-canvas border-b border-github-border flex items-center justify-between px-3 md:px-4 z-20">
         <div className="flex items-center gap-2 md:gap-3">
           <button 
-            className="md:hidden p-1.5 text-github-muted hover:text-white rounded-md"
+            className="md:hidden p-1.5 text-github-muted hover:text-github-text rounded-md"
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           >
             {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
-          <div className="w-7 h-7 md:w-8 md:h-8 bg-github-dark border border-github-border rounded-md flex items-center justify-center font-bold text-white shadow-sm text-sm md:text-base">
+          <div className="w-7 h-7 md:w-8 md:h-8 bg-github-bg border border-github-border rounded-md flex items-center justify-center font-bold text-github-text shadow-sm text-sm md:text-base">
             R
           </div>
-          <h1 className="text-white font-semibold text-base md:text-lg tracking-tight hidden sm:block">README Editor</h1>
+          <h1 className="text-github-text font-semibold text-base md:text-lg tracking-tight hidden sm:block">README Editor</h1>
         </div>
         
         <div className="flex items-center gap-2 md:gap-4">
@@ -186,9 +186,9 @@ export default function Dashboard() {
               </span>
             )}
 
-            <div className="flex bg-[#21262d] rounded-md overflow-hidden border border-github-border mx-1 md:mx-2">
-              <button onClick={() => setViewMode('edit')} className={`px-2 md:px-3 py-1.5 text-xs md:text-sm font-medium ${viewMode === 'edit' ? 'bg-[#373e47] text-white' : 'text-github-muted hover:text-white'}`}>Write</button>
-              <button onClick={() => setViewMode('preview')} className={`px-2 md:px-3 py-1.5 text-xs md:text-sm font-medium ${viewMode === 'preview' ? 'bg-[#373e47] text-white' : 'text-github-muted hover:text-white'}`}>Preview</button>
+            <div className="flex bg-gray-100 rounded-md overflow-hidden border border-github-border mx-1 md:mx-2 p-0.5">
+              <button onClick={() => setViewMode('edit')} className={`px-2 md:px-3 py-1 rounded-md text-xs md:text-sm font-medium ${viewMode === 'edit' ? 'bg-white text-github-text shadow-sm' : 'text-github-muted hover:text-github-text'}`}>Write</button>
+              <button onClick={() => setViewMode('preview')} className={`px-2 md:px-3 py-1 rounded-md text-xs md:text-sm font-medium ${viewMode === 'preview' ? 'bg-white text-github-text shadow-sm' : 'text-github-muted hover:text-github-text'}`}>Preview</button>
             </div>
 
             <button
@@ -196,8 +196,8 @@ export default function Dashboard() {
               disabled={!isDirty || isSaving || !selectedNodeId}
               className={`flex items-center gap-2 px-2 md:px-3 py-1.5 rounded-md text-xs md:text-sm font-medium transition-colors ${
                 !isDirty || !selectedNodeId
-                  ? 'bg-[#21262d] text-github-muted cursor-not-allowed border border-transparent'
-                  : 'bg-github-success hover:bg-github-successHover text-white border border-[rgba(240,246,252,0.1)]'
+                  ? 'bg-gray-100 text-github-muted cursor-not-allowed border border-transparent'
+                  : 'bg-github-success hover:bg-github-successHover text-white border-transparent'
               }`}
             >
               {isSaving ? <RefreshCw size={14} className="animate-spin" /> : <Save size={14} />}

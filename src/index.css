@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-github-dark: #0d1117;
-  --color-github-border: #30363d;
-  --color-github-canvas: #161b22;
-  --color-github-text: #c9d1d9;
-  --color-github-muted: #8b949e;
-  --color-github-link: #58a6ff;
-  --color-github-success: #238636;
-  --color-github-successHover: #2ea043;
+  --color-github-bg: #ffffff;
+  --color-github-border: #d0d7de;
+  --color-github-canvas: #f6f8fa;
+  --color-github-text: #1F2328;
+  --color-github-muted: #656d76;
+  --color-github-link: #0969da;
+  --color-github-success: #1f883d;
+  --color-github-successHover: #1a7f37;
 }
 
 @layer base {
   body {
-    background-color: var(--color-github-dark);
+    background-color: var(--color-github-bg);
     color: var(--color-github-text);
     margin: 0;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -42,29 +42,29 @@
   font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
-  color: #c9d1d9;
+  color: #1F2328;
 }
 .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 600;
   line-height: 1.25;
-  color: #e6edf3;
+  color: #1F2328;
 }
 .markdown-body h1 {
   font-size: 2em;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid #d0d7de;
   padding-bottom: 0.3em;
 }
 .markdown-body h2 {
   font-size: 1.5em;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid #d0d7de;
   padding-bottom: 0.3em;
 }
 .markdown-body h3 { font-size: 1.25em; }
 .markdown-body h4 { font-size: 1em; }
 .markdown-body p { margin-top: 0; margin-bottom: 16px; }
-.markdown-body a { color: #2f81f7; text-decoration: none; }
+.markdown-body a { color: #0969da; text-decoration: none; }
 .markdown-body a:hover { text-decoration: underline; }
 .markdown-body ul, .markdown-body ol {
   padding-left: 2em;
@@ -77,8 +77,8 @@
 .markdown-body li > p { margin-top: 16px; }
 .markdown-body blockquote {
   padding: 0 1em;
-  color: #8b949e;
-  border-left: 0.25em solid #3d444d;
+  color: #656d76;
+  border-left: 0.25em solid #d0d7de;
   margin: 0;
   margin-bottom: 16px;
 }
@@ -86,7 +86,7 @@
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(110,118,129,0.4);
+  background-color: rgba(175,184,193,0.2);
   border-radius: 6px;
 }
 .markdown-body pre {
@@ -94,7 +94,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #161b22;
+  background-color: #f6f8fa;
   border-radius: 6px;
   margin-bottom: 16px;
 }
@@ -114,14 +114,14 @@
 }
 .markdown-body table th, .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid #30363d;
+  border: 1px solid #d0d7de;
 }
 .markdown-body table th {
   font-weight: 600;
-  background-color: #161b22;
+  background-color: #f6f8fa;
 }
 .markdown-body img {
   max-width: 100%;
   box-sizing: content-box;
-  background-color: #0d1117;
+  background-color: #ffffff;
 }
